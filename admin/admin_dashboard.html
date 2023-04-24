@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/admin_style.css">
+
+</head>
+
+<body>
+
+
+    <!-- <div class="message">
+        <span>'.$message.'</span>
+        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+    </div> -->
+
+
+    <header class="header">
+
+        <section class="flex">
+            <a href="home.php" class="logo">F🍩🍩die </a>
+            <a href="dashboard.php" class="logo">Admin<span>Panel</span></a>
+
+            <nav class="navbar">
+                <a href="admin_dashboard.html">HOME</a>
+                <a href="products.html">PRODUCTS</a>
+                <a href="orders.html">ORDERS</a>
+                <!-- <a href="admin_accounts.php">ADMINS</a> -->
+                <!-- <a href="users_accounts.php">USERS</a> -->
+                <a href="messages.php">MESSAGES</a>
+                <a class="icons">
+                    <div id="menu-btn" class="fas fa-bars"></div>
+                    <div id="user-btn" class="fas fa-user"></div>
+                </a>
+            </nav>
+
+
+
+            <div class="profile">
+
+                <p>
+                    <!-- <?= $fetch_profile['name']; ?> -->
+                </p>
+                <a href="update_profile.php" class="btn">update profile</a>
+                <div class="flex-btn">
+                    <a href="admin_login.php" class="option-btn">login</a>
+                    <a href="register_admin.php" class="option-btn">register</a>
+                </div>
+                <a href="../components/admin_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
+            </div>
+
+        </section>
+
+    </header>
+    <!-- admin dashboard section starts  -->
+
+    <section class="dashboard">
+
+        <h1 class="heading">dashboard</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>welcome!</h3>
+                <p>
+                    Admin
+                </p>
+                <a href="update_profile.php" class="btn">update profile</a>
+            </div>
+
+            <div class="box">
+
+                <h3><span>$</span>
+                    <?= $total_pendings; ?><span>/-</span></h3>
+                <p>total pendings</p>
+                <a href="placed_orders.php" class="btn">see orders</a>
+            </div>
+
+            <div class="box">
+                <h3><span>$</span>
+                    <?= $total_completes; ?><span>/-</span></h3>
+                <p>total completes</p>
+                <a href="placed_orders.php" class="btn">see orders</a>
+            </div>
+
+            <div class="box">
+                <h3>
+                    7
+                </h3>
+                <p>total orders</p>
+                <a href="placed_orders.php" class="btn">see orders</a>
+            </div>
+
+            <div class="box">
+
+                <h3>
+                    <?= $numbers_of_products; ?>
+                </h3>
+                <p>products added</p>
+                <a href="products.php" class="btn">see products</a>
+            </div>
+
+            <div class="box">
+
+                <h3>
+                    <?= $numbers_of_users; ?>
+                </h3>
+                <p>users accounts</p>
+                <a href="users_accounts.php" class="btn">see users</a>
+            </div>
+
+            <div class="box">
+
+                <h3>
+                    <?= $numbers_of_admins; ?>
+                </h3>
+                <p>admins</p>
+                <a href="admin_accounts.php" class="btn">see admins</a>
+            </div>
+
+            <div class="box">
+                <h3>
+                    <?= $numbers_of_messages; ?>
+                </h3>
+                <p>new messages</p>
+                <a href="messages.php" class="btn">see messages</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- admin dashboard section ends -->
+
+</body>
+
+</html>
